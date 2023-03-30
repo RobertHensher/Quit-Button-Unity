@@ -1,0 +1,20 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class QuitGame : MonoBehaviour
+{
+    // Reference to the button that will trigger the quit action
+    public Button quitButton;
+
+    void Start()
+    {
+        // Add an event listener to the button to call the Quit method when clicked
+        quitButton.onClick.AddListener(Quit);
+    }
+
+    void Quit()
+    {
+        // Quit the application
+        Application.Quit();
+    }
+}
